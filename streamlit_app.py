@@ -81,7 +81,7 @@ elif page == "About":
     """)
 
     # Raw GitHub URL to the team's image
-    team_image_url = "https://github.com/fabianbacher/wheres-waldo-frontend/blob/main/images/Team%20Waldo.JPG"
+    team_image_url = "https://raw.githubusercontent.com/fabianbacher/wheres-waldo-frontend/main/images/Team%20Waldo.JPG"
 
     # Download the image from the web
     response = requests.get(team_image_url)
