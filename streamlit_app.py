@@ -66,6 +66,7 @@ elif page == "Try it out":
 
                 if "output_image" in data:
                     output_image = data["output_image"]
+                    output_image = output_image.encode("utf-8")
 
                     # Read the output image
                     image_bytes = BytesIO(output_image)
