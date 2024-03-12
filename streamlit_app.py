@@ -68,7 +68,7 @@ elif page == "Try it out":
                     output_image = data["output_image"]
 
                     # Read the output image
-                    image_bytes = io.BytesIO(output_image)
+                    image_bytes = BytesIO(output_image)
                     image = Image.open(image_bytes_io)
                     
                     #with open(output_image_path, "rb") as f:
