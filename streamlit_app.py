@@ -65,17 +65,20 @@ elif page == "Try it out":
                 st.write(message)
 
                 if "output_image" in data:
-                    output_image_path = data["output_image"]
+                    output_image = data["output_image"]
 
                     # Read the output image
-                    with open(output_image_path, "rb") as f:
-                        image_bytes = f.read()
+                    image_bytes = io.BytesIO(output_image)
+                    image = Image.open(image_bytes_io)
+                    
+                    #with open(output_image_path, "rb") as f:
+                        #image_bytes = f.read()
 
                     # Display the output image
-                    st.image(image_bytes, caption="Image with Waldo detected", use_column_width=True)
+                    st.image(image, caption="Image with Waldo detected", use_column_width=True)
 
                     # Allow users to download the result image
-                    st.download_button('Download Result', data=BytesIO(image_bytes), file_name='waldo_found.png')
+                    st.download_button('Download Result', data=BytesIO(image), file_name='waldo_found.png')
 
             else:
                 st.error(f"Error: {response.status_code}")
