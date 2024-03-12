@@ -21,7 +21,7 @@ if page == "Home":
     st.write("This is your starting point. Use the navigation in the sidebar to learn more or to start using the app.")
 
     # Waldo image URL
-    waldo_image_url = "https://github.com/fabianbacher/wheres-waldo-frontend/blob/main/images/Waldo%20Selfie.jpg"
+    waldo_image_url = "https://raw.githubusercontent.com/fabianbacher/wheres-waldo-frontend/main/images/Waldo%20Selfie.jpg"
 
     # Download the image from the web
     response = requests.get(waldo_image_url)
