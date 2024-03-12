@@ -5,8 +5,8 @@ import base64
 from io import BytesIO
 
 # Set the API endpoint URL
-#API_ENDPOINT = "https://waldo-2m4fwvs3ya-ez.a.run.app/detect_waldo"
-API_ENDPOINT = "http://0.0.0.0:8000/detect_waldo"
+API_ENDPOINT = "https://waldo-2m4fwvs3ya-ez.a.run.app/detect_waldo"
+#API_ENDPOINT = "http://0.0.0.0:8000/detect_waldo"
 
 # Set up the title and intro of the app on the main page
 st.title('Find Waldo with AI!')
