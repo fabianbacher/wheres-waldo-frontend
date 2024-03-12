@@ -33,9 +33,17 @@ if page == "Home":
 elif page == "How it works":
     st.header("How it Works")
     st.write("""
-    This app uses advanced deep learning algorithms to identify and locate Waldo in any image.
-    Simply upload your image, and the AI will highlight Waldo for you.
+        This app uses advanced deep learning algorithms to identify and locate Waldo in any image.
+        Simply upload your image, and the AI will highlight Waldo for you.
     """)
+    
+    # The correct raw GitHub URL to the CNN model image
+    cnn_model_image_url = "https://raw.githubusercontent.com/fabianbacher/wheres-waldo-frontend/main/images/CNN%20Model.png"
+    # Download the image from the web
+    response = requests.get(cnn_model_image_url)
+    cnn_model_image = Image.open(BytesIO(response.content))
+    # Display the CNN model image on the 'How it works' page, fitting the size of the blue box placeholder
+    st.image(cnn_model_image, use_column_width=True)
 
 elif page == "Try it out":
     st.header("Try It Out")
